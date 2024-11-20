@@ -1,0 +1,39 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input,
+  form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  form input:focus,
+  form select:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
