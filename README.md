@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+>>>Project Overview
+The User Management Application is a web-based application that enables administrators to manage user records effectively. Users can be added, edited, and deleted through an intuitive interface. The project leverages React.js for the frontend and provides responsive, user-friendly designs for smooth interaction.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+>>>Features
+User Table Display:
+Displays a list of users with fields such as ID, First Name, Last Name, Email, and Department.
+Supports pagination for better navigation.
 
-In the project directory, you can run:
+Add User:
+Allows administrators to add a new user using a popup form.
 
-### `npm start`
+Edit User:
+Users can edit existing records by clicking on the "Edit" button in the table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Delete User:
+Users can delete a record, and the table updates dynamically.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pagination:
+Displays records in paginated views with customizable page size.
 
-### `npm test`
+Responsive Design:
+Optimized for desktop, tablet, and mobile screens.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+>>>Technologies Used
+Frontend: React.js
+Styling: CSS with responsive media queries
+API Communication: Mock API using service functions (fetchUsers, addUser, editUser, deleteUser)
+State Management: React Hooks (useState, useEffect)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>>>Key Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. UserList
+Purpose: Displays the list of users in a table format with action buttons.
+Functions:
+handleSave: Adds or updates user data.
+handleDelete: Deletes a user and updates the state.
+handleEdit: Opens the popup form for editing a user.
+Pagination:
+Dynamically calculates and displays records for the current page.
+Buttons for navigating between pages.'
 
-### `npm run eject`
+2. UserForm
+Purpose: A form popup for adding or editing a user.
+Props:
+user: Object containing user data to pre-fill the form (for edit).
+onSave: Callback to handle form submission.
+onCancel: Closes the popup.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Service Functions (api.js)
+Mock Functions:
+fetchUsers: Fetches the initial user data (mocked for demo purposes).
+addUser: Adds a new user to the data source.
+editUser: Edits existing user data.
+deleteUser: Deletes a user by ID.
